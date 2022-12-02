@@ -36,7 +36,7 @@ public class Problema02 {
         
         if (cantidad_traje == 1){
             descuento = subtotal * 20 / 100;
-            total = subtotal - descuento1;
+            total = subtotal - descuento;
         } else{
             if(cantidad_traje == 2){
                 descuento = subtotal * 25 / 100;
@@ -46,13 +46,13 @@ public class Problema02 {
             descuento = subtotal * 40 / 100;
             total = subtotal - descuento;
         } else{
-            if(cantidad_traje == 4){
+            if(cantidad_traje >= 4){
                 descuento = subtotal * 50 / 100;
                 total = subtotal - descuento;
             }
         } 
         System.out.printf("El subtotal a pagar es:" + subtotal + "\n" + "El total"
-        + "a pagar es:" + total + "\n" + "El descuento es:" + descuento);
+        + " a pagar es:" + total + "\n" + "El descuento es:" + descuento);
     }
 }
     

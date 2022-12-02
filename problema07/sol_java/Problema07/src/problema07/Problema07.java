@@ -5,7 +5,6 @@
 package problema07;
 import java.util.Scanner;
 import java.util.Locale;
-
 /**
  *
  * @author Usuario iTC
@@ -19,30 +18,26 @@ public class Problema07 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        
+       
         int numero;
-        int suma =0
-        int salida;
+        int suma = 0;
+        int limite = 1;
         
-        do{
+        if (limite <= 5) {
             System.out.println("Ingrese numero pares");
             numero = entrada.nextInt();
-            
-            if(numero / 2 == 0){
-            suma = suma + numero;
-            
-            System.out.println("Ingrese 5 si desa continuar, cualquier otro "
-                    + "para seguir");
-            salida = entrada.nextInt();
 
+            if (numero%2 == 0) {
+                suma = suma + numero;
+            } else {
+                if (numero%2 == 1) {
+                    System.out.println("error en el numero ingresado");
+                }
             }
-        } while(numero!=0);
+            limite = limite + 1;
+        }
         
-            System.out.println("Error en el numero ingresado");
-        
-           
-        
-        System.out.printf("La suma de lo pares es" + suma);
-    
-    }
+        System.out.println("La suma de los numeros pares es:" + suma);
+      
+    }   
 }
